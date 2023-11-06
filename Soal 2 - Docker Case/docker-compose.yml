@@ -1,2 +1,11 @@
-version: "3"
+version: "3.11"
 services:
+  api:
+    build: ./api  # Build from the Dockerfile in the api/ directory
+    ports:
+      - "6000:6000"  # Map the host's port 6000 to the container's port 6000
+
+  etl:
+    build: ./etl  # Build from the Dockerfile in the etl/ directory
+    depends_on:
+      - api  # Ensure 'api' service is running before starting 'etl' service
