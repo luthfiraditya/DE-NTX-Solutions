@@ -65,7 +65,7 @@ ORDER BY total_quantity_sold DESC;
 
 
 -- 3. Calculates the total refund amount for each product and Rank products based on their net revenue (total revenue minus refunds)
---  in a descending order. Flag any product with a refund amount surpassing 10% of its total revenue.
+--  in a descending order. Flag any product with a refund amount surpassing 10% of its total revenue. .
 WITH ProductRevenue AS (
     SELECT 
         v2ProductName,
